@@ -68,12 +68,12 @@ img{
 }
 
 .brand h1{
-   font-size: 3rem;
+   font-size: 2.5rem;
    text-transform: uppercase;
    color: white;
 }
 .brand h1 span{
-   color: black;
+   color: rgb(255,77,0);
 }
 
 #header{
@@ -798,11 +798,24 @@ img{
 
 	/* Project list spacing */
 	#projects .project-item {
-		width: 95%;
+		width: 100%;
 		min-height: auto;
 	}
 	#projects .project-info {
 		padding: 24px;
+	}
+	#projects .project-info,
+	#projects .project-img {
+		width: 100%;
+		flex-basis: auto;
+		align-self: stretch;
+	}
+	#projects .project-img { 
+		height: auto;
+	}
+	#projects .project-img img { 
+		width: 100%;
+		display: block;
 	}
 
 	/* About image sizing */
@@ -841,6 +854,20 @@ img{
 	}
 }
 
+@media only screen and (max-width: 600px) {
+    /* Add safe padding on small phones so content doesn't touch edges */
+    #education .education {
+        padding: 60px 16px;
+    }
+    #contact .contact {
+        padding: 60px 16px;
+    }
+    /* Smaller Send Message button on phones */
+    #contact .form-actions .cta{
+        padding: 10px 22px;
+        font-size: 1.6rem;
+    }
+}
 @media only screen and (max-width: 600px) {
 	/* Hide hero background image on small phones and keep solid color */
 	#one {
