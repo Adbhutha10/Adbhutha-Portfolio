@@ -751,6 +751,7 @@ img{
 #footer .social-item img{
    filter: grayscale(1);
    transition: .3s ease filter;
+   border-radius: 50%;
 }
 #footer .social-item:hover img{
    filter: grayscale(0);
@@ -862,10 +863,20 @@ img{
     #contact .contact {
         padding: 60px 16px;
     }
+    #projects .projects {
+        padding: 60px 16px;
+    }
     /* Smaller Send Message button on phones */
     #contact .form-actions .cta{
         padding: 10px 22px;
         font-size: 1.6rem;
+    }
+    /* Smaller navbar brand on phones */
+    .brand h1 {
+        font-size: 2rem;
+    }
+    .brand h1 span {
+        color: rgb(255, 77, 0);
     }
 }
 @media only screen and (max-width: 600px) {
