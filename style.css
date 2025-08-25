@@ -223,7 +223,7 @@ img{
 #one .one{
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0, 50px;
+    padding: 0 50px;
     justify-content: flex-start;
 }
 
@@ -628,44 +628,93 @@ img{
    margin: 0 auto;
 }
 
-#contact .contact-items{
-   width: 400px;
+/* New contact form styles */
+#contact{
+   background: #f7f7f9;
+}
+#contact .section-title{
+   color: #000000;
+}
+#contact .contact-form{
+   width: 100%;
+   max-width: 900px;
+   margin-top: 30px;
 }
 
-#contact .contact-item{
-   width: 80%;
-   padding: 20px;
-   text-align: center;
+#contact .form-group{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   margin-bottom: 22px;
+}
+
+#contact .form-group label{
+   color: #111;
+   font-size: 1.6rem;
+}
+
+#contact .form-group input,
+#contact .form-group textarea{
+   width: 100%;
+   background: #ffffff;
+   border: 1px solid #e2e2e2;
+   color: #333333;
+   padding: 16px 18px;
    border-radius: 10px;
-   padding: 30px;
-   margin: 30px;
+   font-size: 1.6rem;
+   outline: none;
+}
+
+#contact .form-group input::placeholder,
+#contact .form-group textarea::placeholder{
+   color: #8a8a8a;
+}
+
+#contact .form-actions{
    display: flex;
    justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   box-shadow: 0px 0px 18px 0 #0000002c;
-   transition: .3s ease box-shadow;
-}
-#contact .contact-item:hover{
-   box-shadow:  0px 0px 5px 0 #0000002c;
+   margin-top: 10px;
 }
 
-#contact .icon{
-   width: 70px;
-   margin: 0 auto;
-   margin-bottom: 10px;
+#contact .form-status{
+   margin-top: 14px;
+   text-align: center;
+   font-size: 1.4rem;
+   color: #333333;
 }
 
-#contact .contact-info h1{
-   font-size:  2.5rem;
-   font-weight: 500;
-   margin-bottom: 5px;
+/* Light accent interactions */
+#contact .form-group input:focus,
+#contact .form-group textarea:focus{
+   border-color: rgb(255, 77, 0);
+   box-shadow: 0 0 0 3px rgba(255, 77, 0, 0.15);
 }
 
-#contact .contact-info h2{
-   font-size: 1.3rem;
-   line-height: 2rem;
-   font-weight: 500;
+#contact .form-actions .cta{
+   background: rgb(255, 77, 0);
+   border: none;
+   color: #ffffff;
+   border-radius: 999px;
+   padding: 12px 32px;
+}
+#contact .form-actions .cta:hover{
+   background: #e15e00;
+}
+
+@media only screen and (min-width: 768px) {
+   #contact .contact-form{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+   }
+   #contact .contact-form .form-group:nth-child(3),
+   #contact .contact-form .form-actions{
+      grid-column: 1 / -1;
+   }
+   #contact .contact-form .form-status{
+      grid-column: 1 / -1;
+      justify-self: center;
+   }
 }
 
 #footer{
@@ -739,6 +788,35 @@ img{
 }
  
 @media only screen and (max-width: 768px) {
+	/* Typography tweaks for small screens */
+	h1.section-title {
+		font-size: 3.2rem;
+	}
+	#one h1 {
+		font-size: 3rem;
+	}
+
+	/* Project list spacing */
+	#projects .project-item {
+		width: 95%;
+		min-height: auto;
+	}
+	#projects .project-info {
+		padding: 24px;
+	}
+
+	/* About image sizing */
+	#about .col-left {
+		width: 220px;
+		height: 320px;
+	}
+
+	/* Contact spacing */
+	#contact .contact-item {
+		margin: 16px;
+		width: 100%;
+		max-width: 480px;
+	}
 	#education .education-details {
 		flex-direction: column;
 		gap: 20px;
@@ -760,6 +838,17 @@ img{
 
 	#education .education-card h4 {
 		font-size: 1.6rem;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	/* Hide hero background image on small phones and keep solid color */
+	#one {
+		background-image: none !important;
+		background-color: #f5a657;
+	}
+	#one .one {
+		padding: 0 20px;
 	}
 }
 
