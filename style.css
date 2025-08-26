@@ -682,7 +682,9 @@ img {
 
 #contact .form-actions {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
     margin-top: 10px;
 }
 
@@ -693,12 +695,16 @@ img {
     color: #333333;
 }
 
-/* Alternate direct email line under the form */
-#contact .alt-contact {
-    margin-top: 12px;
+#contact .direct-email {
+    margin-top: 6px;
     text-align: center;
-    font-size: 1.9rem;
-    color: #111;
+    font-size: clamp(1.3rem, 0.9rem + 0.6vw, 1.6rem);
+    color: #555;
+}
+
+#contact .direct-email a {
+    color: rgb(255, 77, 0);
+    text-decoration: underline;
 }
 
 
@@ -801,15 +807,15 @@ img {
 }
 
 #footer .social-item:nth-child(1):hover svg {
-    color: #E4405F;
+    color: #ffffff;
 }
 
 #footer .social-item:nth-child(2):hover svg {
-    color: #333;
+    color: #ffffff;
 }
 
 #footer .social-item:nth-child(3):hover svg {
-    color: #0077b5;
+    color: #ffffff;
 }
 
 #footer .brand h1 {
@@ -820,23 +826,37 @@ img {
     color: white;
 }
 
-#footer .social-item:nth-child(1):hover {
+#footer .social-item:nth-child(1) a:hover {
     background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
     border-color: #dc2743;
 }
 
-#footer .social-item:nth-child(2):hover {
+#footer .social-item:nth-child(2) a:hover {
     background: #333;
     border-color: #333;
 }
 
-#footer .social-item:nth-child(3):hover {
+#footer .social-item:nth-child(3) a:hover {
     background: #0077b5;
     border-color: #0077b5;
 }
 
 #footer p {
     color: white;
+}
+
+
+/* Remove default focus ring box on footer icons and add a subtle custom focus */
+
+#footer .social-item a:focus,
+#footer .social-item a:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.35), 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+#footer .social-item a:active {
+    transform: translateY(-1px) scale(1.06);
 }
 
 @keyframes hamb_puls {
