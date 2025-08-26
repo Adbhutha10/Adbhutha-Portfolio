@@ -693,6 +693,14 @@ img {
     color: #333333;
 }
 
+/* Alternate direct email line under the form */
+#contact .alt-contact {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 1.9rem;
+    color: #111;
+}
+
 
 /* Light accent interactions */
 
